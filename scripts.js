@@ -1,0 +1,85 @@
+document.querySelector('.menu-icon').addEventListener('click', function() {
+    document.querySelector('.nav-menu').classList.toggle('active');
+});
+
+//toggle for about our website development steps
+
+document.querySelectorAll('.step').forEach(function(step, index) {
+    const content = step.querySelector('.content');
+    const button = step.querySelector('.toggle-btn');
+
+    // Open the first content section by default
+    if (index === 0) {
+        content.style.display = 'block';
+        button.textContent = '-';
+    } else {
+        content.style.display = 'none';
+        button.textContent = '+';
+    }
+
+    button.addEventListener('click', function() {
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+            button.textContent = '+';
+        } else {
+            // Close all other steps
+            document.querySelectorAll('.step .content').forEach(function(otherContent) {
+                otherContent.style.display = 'none';
+            });
+            document.querySelectorAll('.step .toggle-btn').forEach(function(otherButton) {
+                otherButton.textContent = '+';
+            });
+
+            // Open the clicked step
+            content.style.display = 'block';
+            button.textContent = '-';
+        }
+    });
+});
+
+
+//change sentence on home page
+const sentences = [
+    "Turning your vision into a digital reality.",
+    "Shaping the future of your digital presence.",
+    "Creative solutions, visionary design.",
+    "Designing experiences that leave a lasting impact.",
+    "Where innovation and creativity converge."
+];
+
+let index = 0;
+const heading = document.getElementById('animated-heading');
+
+function changeSentence() {
+    heading.textContent = sentences[index];
+    index = (index + 1) % sentences.length;
+}
+
+setInterval(changeSentence, 3000); // Change sentence every 3 seconds
+
+
+
+// quote page javascript
+document.addEventListener('DOMContentLoaded', function () {
+    const steps = document.querySelectorAll('.quote-us-form-step');
+    const nextButtons = document.querySelectorAll('.quote-us-next-button');
+    const backButtons = document.querySelectorAll('.quote-us-back-button');
+
+    let currentStep = 0;
+
+    nextButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            steps[currentStep].classList.remove('active');
+            currentStep = (currentStep + 1) % steps.length;
+            steps[currentStep].classList.add('active');
+        });
+    });
+
+    backButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            steps[currentStep].classList.remove('active');
+            currentStep = (currentStep - 1 + steps.length) % steps.length;
+            steps[currentStep].classList.add('active');
+        });
+    });
+});
