@@ -671,7 +671,7 @@ margin-right: 100px;
         /* display: flex; */
     /* } */
 	.logo{
-	 margin-left: 20px!important; /* Move the logo slightly to the right */
+	 margin-left: 0px!important; /* Move the logo slightly to the right */
     }
 	 .hero-text-container {
         transform: translate(0px)!important; /* Reset any offset movement */
