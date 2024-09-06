@@ -652,6 +652,8 @@ margin-right: 100px;
 
     .nav-menu.active {
         display: flex;
+		 width: 100vw; /* Make sure it spans the full width of the screen */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
     .nav-menu li {
@@ -832,12 +834,7 @@ background-color: #b0cde8;
 }
 
 
-/* Responsive Adjustments for Service Page */
-@media (max-width: 768px) {
-    .services-page {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 //about us page css
 
@@ -887,6 +884,11 @@ padding: 50px;
 
 @media (max-width: 768px) {
    .about-us-container {
+        flex-direction: column;
+        text-align: center;
+    }
+	
+	.page-service, .quote-us-section, .contact-section {
         flex-direction: column;
         text-align: center;
     }
