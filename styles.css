@@ -1087,7 +1087,7 @@ padding: 50px;
     }
 	.hero-text {
 		justify-content:Center;
-		transform: translateX(30px); /* Move the text 30px to the right */
+		transform: translateX(0px); /* Move the text 30px to the right */
      }
 	 .services-section h2 {
 		font-size: 3rem;
