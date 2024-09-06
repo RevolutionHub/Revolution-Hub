@@ -909,6 +909,14 @@ padding: 50px;
     .contact-container {
         flex-direction: column;
     }
+	.contact-container {
+    background-color: #b0cde8; /* White background for the container */
+    padding: 0px;
+   
+    max-width: 400px; /* Adjust width for a centered form */
+    width: 100%;
+   
+}
 
     .contact-info, .contact-form {
         width: 100%;
@@ -1050,6 +1058,14 @@ padding: 50px;
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+	.contact-form input, 
+   .contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
     .quote-us-container {
         max-width: 100%;
     }
