@@ -38,6 +38,16 @@ document.getElementById('quoteUsForm').addEventListener('submit', function(event
         console.log('Success:', data);
         if (data.id) {
         alert('Quote request submitted successfully!');
+		// Reset form fields
+            document.getElementById('quoteUsForm').reset();
+            
+            // Reset to the first step
+            const steps = document.querySelectorAll('.quote-us-form-step');
+            steps.forEach(step => step.classList.remove('active')); // Hide all steps
+            steps[0].classList.add('active'); // Show the first step
+            
+            // Set current step to the first one
+            currentStep = 0;
     } else {
         alert('Failed to submit the form.');
         console.error('Error submitting to Airtable:', data);
