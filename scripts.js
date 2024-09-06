@@ -1,19 +1,20 @@
-// document.querySelector('.menu-toggle').addEventListener('click', function() {
-    // document.querySelector('.nav-menu').classList.toggle('active');
-// });
 document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const navMenu = document.querySelector('.nav-menu');
+    const menuToggle = document.querySelector('.menu-toggle');
+
     // Toggle the 'active' class on the nav menu to open/close it
-    document.querySelector('.nav-menu').classList.toggle('active');
+    navMenu.classList.toggle('active');
 
     // Change the icon based on whether the menu is active or not
-    if (document.querySelector('.nav-menu').classList.contains('active')) {
+    if (navMenu.classList.contains('active')) {
         // Change to close icon (✖) when the menu is open
-        document.querySelector('.menu-toggle').innerHTML = '&#10006;'; 
+        menuToggle.innerHTML = '&#10006;'; // X icon
     } else {
         // Change back to hamburger icon (☰) when the menu is closed
-        document.querySelector('.menu-toggle').innerHTML = '&#9776;';
+        menuToggle.innerHTML = '&#9776;'; // Hamburger icon
     }
 });
+
 
 
 //toggle for about our website development steps
