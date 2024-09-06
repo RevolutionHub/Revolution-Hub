@@ -58,7 +58,6 @@ const sentences = [
     "Turning your vision into a digital reality.",
     "Shaping the future of your digital presence.",
     "Creative solutions, visionary design.",
-    "Designing experiences that leave a lasting impact.",
     "Where innovation and creativity converge."
 ];
 
@@ -70,7 +69,7 @@ function changeSentence() {
     index = (index + 1) % sentences.length;
 }
 
-setInterval(changeSentence, 3000); // Change sentence every 3 seconds
+setInterval(changeSentence, 10000); // Change sentence every 10 seconds
 
 
 
