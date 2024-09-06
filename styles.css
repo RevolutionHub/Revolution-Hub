@@ -117,23 +117,16 @@ nav ul li a {
     transform: scale(1.05);
 }
 .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-	 height: 3px;
-    width: 25px;
-    background-color: #000;
-    margin: 5px 0;
-    border-radius: 5px;
-}
+     display:none;
+	 }
 
-.menu-toggle span {
-    height: 3px;
-    width: 25px;
-    background-color: #000;
-    margin: 5px 0;
-    border-radius: 5px;
-}
+/* .menu-toggle span { */
+    /* height: 3px; */
+    /* width: 25px; */
+    /* background-color: #000; */
+    /* margin: 5px 0; */
+    /* border-radius: 5px; */
+/* } */
 
 
 
@@ -666,9 +659,9 @@ margin-right: 100px;
         text-align: center;
     }
 
-    .menu-toggle {
-        display: flex;
-    }
+    /* .menu-toggle { */
+        /* display: flex; */
+    /* } */
 	.logo{
 	 margin-left: 20px!important; /* Move the logo slightly to the right */
     }
@@ -1173,3 +1166,46 @@ padding: 50px;
    color:#5271ff;
 }
 
+/* Hide the menu-toggle button on large screens */
+.menu-toggle {
+    display: none;
+}
+
+/* Media query for small screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Hamburger icon is visible on small screens */
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        position: relative;
+        z-index: 999;
+    }
+
+    /* Hide the navigation menu by default on small screens */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    /* Show the menu when the active class is applied */
+    .nav-menu.active {
+        display: block;
+    }
+
+    /* Style for the nav items on small screens */
+    .nav-menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
