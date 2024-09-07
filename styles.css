@@ -146,6 +146,7 @@ nav ul li a {
 
 
 .header-container, .hero-content {
+	height:200px;
   }
 
 .hero-content {
@@ -702,6 +703,10 @@ margin-right: 100px;
     .quote-section-container img {
         margin-bottom: 20px;
     }
+	.quote-section-container img {
+    width: 100%; /* The image takes up the full width of its container */
+    height:400px;
+}
  .about-container {
         flex-direction: column;
         text-align: center;
