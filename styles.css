@@ -1112,7 +1112,7 @@ padding: 50px;
 	.hero-text {
 		justify-content:Center;
 		transform: translateX(0px); /* Move the text 30px to the right */
-     height: 320px;
+     height: 400px;
 	 }
 	 .services-section h2 {
 		font-size: 3rem;
@@ -1234,4 +1234,9 @@ padding: 50px;
         text-align: center;
         padding: 10px 0;
     }
+}
+
+/* Styles for most phones, including iPhone 13 Pro (max-width: 430px) */
+@media only screen and (max-width: 430px) {
+    /* Styles for typical smartphones */
 }
