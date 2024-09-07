@@ -174,7 +174,7 @@ nav ul li a {
 .hero-text h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    animation: fadeInOut 10s infinite;
+    animation: fadeInOut 3s infinite;
 }
  
 @keyframes fadeInOut {
