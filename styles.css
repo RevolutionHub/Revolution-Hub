@@ -1109,11 +1109,13 @@ padding: 50px;
     .quote-us-submit-button {
         margin-left: 0; /* Reset margin to center on smaller screens */
     }
+	.onlyhome-page{
+		  height: 400px;
+	}
 	.hero-text {
 		justify-content:Center;
 		transform: translateX(0px); /* Move the text 30px to the right */
-     height: 400px;
-	 }
+    }
 	 .services-section h2 {
 		font-size: 3rem;
 		color: #5271ff;
