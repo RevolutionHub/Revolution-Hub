@@ -69,7 +69,7 @@ function changeSentence() {
     index = (index + 1) % sentences.length;
 }
 
-setInterval(changeSentence, 10000); // Change sentence every 10 seconds
+setInterval(changeSentence, 3000); // Change sentence every 10 seconds
 
 
 
