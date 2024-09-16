@@ -139,9 +139,9 @@ nav ul li a {
       /* transition: all 0.3s ease-in-out; */
 }
 
-.logo video {
-   /* transition: all 0.3s ease-in-out; */
-}
+/* .logo video {
+   /* transition: all 0.3s ease-in-out;
+}  */
 
 
 
@@ -762,8 +762,16 @@ margin-right: 100px;
     }
 }
 
+.bottom-button{
+    text-decoration: none;
+}
 
-//Service Page
+.bottom-button:hover{
+    background-color: #5271ff;
+}
+
+
+/* //Service Page */
 .page-service {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -849,7 +857,7 @@ background-color: #b0cde8;
 
 
 
-//about us page css
+/* //about us page css */
 
 .about-us-section {
     padding: 60px 20px;
@@ -935,7 +943,7 @@ padding: 50px;
 
 }
 
-// quote page css
+/* // quote page css */
 /* Get a Free Quote Section */
 .quote-us-section {
     display: flex;
@@ -1134,7 +1142,7 @@ padding: 50px;
 }
 
 
-//contact div inside about 
+/* //contact div inside about  */
 
 .contact-section {
     background-color: #b0cde8; /* Background color of the section */
