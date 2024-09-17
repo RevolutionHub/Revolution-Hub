@@ -1064,6 +1064,13 @@ padding: 50px;
     margin-left: auto; /* Pushes the button to the far right */
 }
 
+#successMessage {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    color: #5271ff;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
