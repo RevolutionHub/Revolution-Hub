@@ -113,6 +113,15 @@ document.getElementById('quoteUsForm').addEventListener('submit', function(event
     .then(data => {
         // Display the success message
         document.getElementById('successMessage').style.display = 'block';
+        document.getElementById('quoteUsForm').reset();
+            
+            // Reset to the first step
+            const steps = document.querySelectorAll('.quote-us-form-step');
+            steps.forEach(step => step.classList.remove('active')); // Hide all steps
+            steps[0].classList.add('active'); // Show the first step
+            
+            // Set current step to the first one
+            currentStep = 0;
     })
     .catch(error => {
         console.error('Error submitting form:', error);
