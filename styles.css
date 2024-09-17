@@ -1064,7 +1064,7 @@ padding: 50px;
     margin-left: auto; /* Pushes the button to the far right */
 }
 
-#successMessage {
+.successMessage {
     display: none;
     margin-top: 20px;
     padding: 10px;
