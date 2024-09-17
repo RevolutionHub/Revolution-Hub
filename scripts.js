@@ -97,3 +97,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+//quote form on click submit event
+document.getElementById('quoteUsForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    var formData = new FormData(this); // Collect form data
+
+    // Send the form data to Google Apps Script using AJAX
+    fetch('https://script.google.com/macros/s/AKfycbx1jRP7_kGbShk6gdsiQ2CByMco89G2mX824SvTMglp42GPu8ovEXjDx1NxMXrFdrRV/exec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        // Display the success message
+        document.getElementById('successMessage').style.display = 'block';
+    })
+    .catch(error => {
+        console.error('Error submitting form:', error);
+    });
+});
