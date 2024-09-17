@@ -54,10 +54,10 @@
             <!-- <p>Looking to start a new project? Whether it's a new website, a redesign, or ongoing support, we're here to help. Fill out the form below to receive a personalized, no-obligation quote for our services.</p> -->
         <!-- </div> -->
         <div class="quote-us-form">
-           <!-- <form id="quoteUsForm"> --!>
-		<form id="quoteUsForm" action="https://script.google.com/macros/s/AKfycbwyc81lLDUn9yP5U-y6uXcPVXPa0KW6Q_105PX5FH_ByJNDxBsTPd2dp8pXjga0ZDW6/exec" method="POST">
+            <!-- <form id="quoteUsForm"> -->
+            <form id="quoteUsForm" action="https://script.google.com/macros/s/AKfycbwb8PHn7eXvOe4lAb6nMcPlgjN0t7UR9FX9LOqeKMj7T8tPiT09B-ALgdbfb5k4Y8Ih/exec" method="POST">
                 <div class="quote-us-form-step active">
-                    <label for="name">Name</label>
+                    <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required>
                     <button type="button" class="quote-us-next-button">Next</button>
                 </div>
@@ -72,13 +72,22 @@
                 </div>
 
                 <div class="quote-us-form-step">
+                    <label for="phone">Mobile</label>
+                    <input type="tel" id="phone" name="phone" required>
+                      <div class="quote-us-button-group">
+                        <button type="button" class="quote-us-back-button">Back</button>
+                        <button type="button" class="quote-us-next-button">Next</button>
+                    </div>
+                </div>
+
+                <div class="quote-us-form-step">
                     <label for="service">Service Required</label>
                     <select id="service" name="service" required>
-                        <option value="website-development">Website Development</option>
-                        <option value="website-design">Website Design</option>
-                        <option value="ecommerce-development">eCommerce Development</option>
-                        <option value="logo-design">Logo Design</option>
-                        <option value="banner-design">Banner Design</option>
+                        <option value="website-development">Web Design & Development</option>
+                        <option value="website-design">Social Media Marketing</option>
+                        <option value="ecommerce-development">eCommerce Development - Shopify</option>
+                        <option value="logo-design">Branding / Graphic Design</option>
+                        <option value="banner-design">Website Maintenance</option>
                         <option value="other">Other</option>
                     </select>
                      <div class="quote-us-button-group">
@@ -103,18 +112,31 @@
                         <button type="button" class="quote-us-back-button">Back</button>
                         <button type="submit" class="quote-us-submit-button">Request Quote</button>
                     </div>
-                    
+                </div>
+
+                <div class="quote-us-form-step"></div>
+                    <label for="info">How Did You Know About Us?</label>
+                    <select id="info" name="info" required>
+                        <option value="Search-Engine">Search Engine</option>
+                        <option value="Social-Media">Social Media</option>
+                        <option value="Referral">Referral</option>
+                    </select>
+                     <div class="quote-us-button-group">
+                        <button type="button" class="quote-us-back-button">Back</button>
+                        <button type="button" class="quote-us-next-button">Next</button>
+                    </div>
                 </div>
             </form>
-         <div id="successMessage" class="successMessage" style=" display: none;
-    margin-top: 20px;
-    padding: 10px;
-    color: #5271ff;">
-		Your quote request has been submitted successfully!
-	</div>
+            <div id="successMessage" class="successMessage" style=" display: none;
+                margin-top: 20px;
+                padding: 10px;
+                color: #5271ff;">
+                    Your quote request has been submitted successfully!
+	        </div>
         </div>
     </div>
 </section>
+
 
 <section class="animated-contact-section">
 		<div class="contact-content">
