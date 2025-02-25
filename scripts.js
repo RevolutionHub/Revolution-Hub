@@ -105,7 +105,7 @@ document.getElementById('quoteUsForm').addEventListener('submit', function(event
     var formData = new FormData(this); // Collect form data
 
     // Send the form data to Google Apps Script using AJAX
-    fetch('https://script.google.com/macros/s/AKfycbxXUe_doiO6TcHyYhQGvXlx6ftYcqsHrnoWeaJC1MGo3CYFG8jUpSwwonmYoLUqy9zW/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxdgDHkVRaNSzMDR3lphBgis_17nhlQvLSMggmXlY9GoZ_j7urdJxp4bhstnbz5T9Na/exec', {
         method: 'POST',
         body: formData
     })
