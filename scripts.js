@@ -98,14 +98,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//quote form on click submit event
+// Quote form on submit event
 document.getElementById('quoteUsForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); // Prevent default form submission
 
-    var formData = new FormData(this); // Collect form data
+    const phoneInput = document.getElementById('phone');
+    const phoneValue = phoneInput.value.trim();
+
+    // Basic NZ mobile validation: starts with 021/022/027/028/029 or +64 equivalents
+    const phoneRegex = /^(\+?64|0)?2\d{7,9}$/;
+
+    if (!phoneRegex.test(phoneValue)) {
+        alert("Please enter a valid New Zealand mobile number.");
+        phoneInput.focus();
+        return; // Stop submission
+    }
+
+    const formData = new FormData(this); // Collect form data
 
     // Send the form data to Google Apps Script using AJAX
-    fetch('https://script.google.com/macros/s/AKfycbxdgDHkVRaNSzMDR3lphBgis_17nhlQvLSMggmXlY9GoZ_j7urdJxp4bhstnbz5T9Na/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwZc1zVva83rVwN0RduvL102zDraUyYU077CSjJdMecx-Nf8V-zMBK087KkfVMsf_wP/exec', {
         method: 'POST',
         body: formData
     })
@@ -114,16 +126,17 @@ document.getElementById('quoteUsForm').addEventListener('submit', function(event
         // Display the success message
         document.getElementById('successMessage').style.display = 'block';
         document.getElementById('quoteUsForm').reset();
-            
-            // Reset to the first step
-            const steps = document.querySelectorAll('.quote-us-form-step');
-            steps.forEach(step => step.classList.remove('active')); // Hide all steps
-            steps[0].classList.add('active'); // Show the first step
-            
-            // Set current step to the first one
-            currentStep = 0;
+
+        // Reset to the first step
+        const steps = document.querySelectorAll('.quote-us-form-step');
+        steps.forEach(step => step.classList.remove('active'));
+        steps[0].classList.add('active');
+
+        // Reset step tracker if used elsewhere
+        currentStep = 0;
     })
     .catch(error => {
         console.error('Error submitting form:', error);
     });
 });
+
